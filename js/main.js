@@ -3,6 +3,26 @@ const mobile_menu = document.querySelector('.header .nav-bar .nav-list ul');
 const menu_item = document.querySelectorAll('.header .nav-bar .nav-list ul li a');
 const header = document.querySelector('.header.container');
 
+const tabs = document.querySelector(".wrapper");
+const tabButton = document.querySelectorAll(".about-btn");
+const contents = document.querySelectorAll(".about-category");
+
+tabs.onclick = e => {
+  const id = e.target.dataset.id;
+  if (id) {
+    tabButton.forEach(btn => {
+      btn.classList.remove("active");
+    });
+    e.target.classList.add("active");
+
+    contents.forEach(content => {
+      content.classList.remove("active");
+    });
+    const element = document.getElementById(id);
+    element.classList.add("active");
+  }
+};
+
 
 hamburger.addEventListener('click', () => {
 	hamburger.classList.toggle('active');
