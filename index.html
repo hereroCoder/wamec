@@ -4,8 +4,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./styles/style.css">
   <title>WameChibamo</title>
+  <!-- swiper css link -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+ <!-- style css link -->
+
+ <link rel="stylesheet" href="/styles/style.css">
 </head>
 
 <body>
@@ -27,6 +33,7 @@
             <li><a href="#blogs" data-after="blog">Blog</a></li>
             <li><a href="#projects" data-after="Projects">Projects</a></li>
             <li><a href="#about" data-after="About">About</a></li>
+            <li><a href="#certificates" data-after="About">Certificates</a></li>
             <li><a href="#contact" data-after="Contact">Contact</a></li>
           </ul>
         </div>
@@ -34,7 +41,6 @@
     </div>
   </header>
   <!-- End Header -->
-
 
   <!-- Hero Section  -->
   <section id="hero">
@@ -188,34 +194,88 @@
           exercitationem cumque earum omnis ipsum rem accusantium quis, quas quia, accusamus provident suscipit magni!
           Expedita sint ad dolore, commodi labore nihil velit earum ducimus nulla quae nostrum fugit aut, deserunt
           reprehenderit libero enim!</p>
-
-        <div class="wrapper">
-          <div id="about-btn-container">
-            <button class="about-btn active" data-id="education" >Education</button>
-            <button class="about-btn" data-id="certificates">Certificates</button>
-          </div>
-          
-          <div class="about-category active" id="education">
-            
-            <p>BGCSE, Valedictorian</p>
-            <p>Alevel, AAAA</p>
-            <p>Bsc Biomedical Engineering</p>
-            <p>Msc Biomedical Engineering</p>
-            
-          </div>
-
-          <div class="about-category" id="certificates">
-            <p>Code first Girls, Full Stack Devloper Nanodegree</p>
-          </div>
-        </div>
-        
-       
         <a href="https://drive.google.com/file/d/1nqcwls1vwhICny96urijV4W_sWIO0Pk-/view?usp=drive_link" target="_blank" class="btn">Download CV</a>
       </div>
     </div>
   </section>
   <!-- End About Section -->
 
+  <!-- certificates section -->
+  <section id="certificates">
+    <div class="cerificates container">
+      <h1 class="section-title">certificates</h1>
+      <div class="promotion-slider swiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide  slide">
+              <div class="image">
+                <img src="images/computers.png" alt="">
+                <!-- <h3>Quick Transfers</h3> -->
+              </div>
+            </div>
+            <div class="swiper-slide  slide">
+              <div class="image">
+                <img src="images/cfg.png" alt="">
+                <!-- <h3>Quick Transfers</h3> -->
+              </div>
+            </div>
+            <div class="swiper-slide  slide">
+              <div class="image">
+                <img src="images/morganS.png" alt="">
+                <!-- <h3>Quick Transfers</h3> -->
+              </div>
+            </div>
+            <div class="swiper-slide  slide">
+              <div class="image">
+                <img src="images/introWeb.png" alt="">
+                <!-- <h3>Quick Transfers</h3> -->
+              </div>
+            </div>
+            <div class="swiper-slide  slide">
+              <div class="image">
+                <img src="images/htmlessential.png" alt="">
+                <!-- <h3>Quick Transfers</h3> -->
+              </div>
+            </div>
+            <div class="swiper-slide  slide">
+              <div class="image">
+                <img src="images/programmingFundamentals.png" alt="">
+                <!-- <h3>Quick Transfers</h3> -->
+              </div>
+            </div>
+            <div class="swiper-slide  slide">
+              <div class="image">
+                <img src="images/pythonNonProgrammers.png" alt="">
+                <!-- <h3>Quick Transfers</h3> -->
+              </div>
+            </div>
+            <div class="swiper-slide  slide">
+              <div class="image">
+                <img src="images/programmingFundamentals2.png" alt="">
+                <!-- <h3>Quick Transfers</h3> -->
+              </div>
+            </div>
+            <div class="swiper-slide  slide">
+              <div class="image">
+                <img src="images/programmingReal.png" alt="">
+                <!-- <h3>Quick Transfers</h3> -->
+              </div>
+            </div>
+           
+            <div class="swiper-slide  slide">
+              <div class="image">
+                <img src="images/simplecoding.png" alt="">
+                <!-- <h3>Quick Transfers</h3> -->
+              </div>
+            </div>
+
+        </div>
+      <!-- navigation buttons -->
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+      </div>
+    </div>
+  </section>
+  <!-- end certificates section -->
   <!-- Contact Section -->
   <section id="contact">
     <div class="contact container">
@@ -264,7 +324,8 @@
           <a href="#"><img src="images/linkedin.png" /></a>
         </div>
       </div>
-      <p>Copyright © 2020 WameChibamo. All rights reserved</p>
+      <p>Copyright  &copy;
+        <script>document.write(new Date().getFullYear())</script>  WameChibamo. All rights reserved</p>
     </div>
   </footer>
   <!-- End Footer -->
