@@ -8,6 +8,9 @@
     <!-- style link -->
     <link rel="stylesheet" href="/styles/style.css">
 
+    <!-- font awesome link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+
     <!-- javascript link -->
     <script src="./js/main.js" defer></script>
 
@@ -15,11 +18,132 @@
 
 
   <body>
-    <header></header>
-    <section>
-      <div class="btn">hi</div>
+    <!-- header starts -->
+    <header>
+      <!-- logo -->
+      <a href="#">
+        <p class="logo">.WAME.</p>
+      </a>
+
+      <!-- navigation -->
+      <nav>
+        <i id="close-menu-btn" class="fas fa-times" onclick=closeMenu()></i>
+        <ul>
+          <li><a href="#hero" >Home</a></li>
+          <li><a href="#blogs">Blog</a></li>
+          <li><a href="#projects" >Projects</a></li>
+          <li><a href="#about" >About</a></li>
+          <li><a href="#certificates" >Certificates</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div id="menu-btn" class="fas fa-bars" onclick=openMenu() ></div>
+      
+
+    </header>
+    <!-- header ends -->
+
+    <!-- hero starts -->
+    <section class="hero" id="hero">
+      <div class="hero-left">
+        <P>Hello, My name is</P>
+        <h1>Wame Chibamo</h1>
+        <h2>Software Developer</h2>
+        <a href="#" class="btn">View CV</a>
+      </div>
+      <div class="hero-right">
+        <img src="/images/profile3.jpg" alt="owner pic">
+      </div>
+     
+    </section>
+    <!-- hero ends -->
+
+    <section class="projects" id="projects">
+      <h2 class="section-title">projects</h2>
+      <div class="projects-container">
+
+        <div class="project">
+          <div class="image">
+            <img src="/images/projects3.jpg" alt="desktop screen">
+            <div class="logo">
+              <img src="/images/chibz-logo.png" alt="" >
+            </div>
+          </div>
+          <div class="content">
+            <h3>E-commerce</h3>
+            <p>Individual project</p>
+            <p>As a Motswana in the UK, I struggled to find Botswana goodies online. That's why I created this shop.a quick and easy solution for Batswana abroad. Enjoy a taste of home </p>
+            <div class="project-btns">
+              <a href="https://github.com/hereroCoder/onlineShop"  class="btn" target="_blank">Source Code</a>
+              <a href="https://hererocoder.github.io/onlineShop/" class="btn" target="_blank">Live Demo</a>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="project">
+          <div class="image">
+            <img src="/images/projects3.jpg" alt="desktop screen">
+            <div class="logo">
+              <img src="/images/logo2.png" alt="" >
+            </div>
+          </div>
+
+          <div class="content">
+            <h3>Money App</h3>
+            <p>Individual project</p>
+            <p>A web app for friends to effortlessly borrow or lend money among themselves. Eliminates awkward reminders about owed money and the concern of forgetting borrowers. </p>
+            <div class="project-btns">
+              <a href="https://github.com/hereroCoder/MoneyBuddies" class="btn" target="_blank">Source Code</a>
+              <a href="https://hererocoder.github.io/MoneyBuddies/" class="btn" target="_blank">Live Demo</a>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="project">
+          <div class="image">
+            <img src="/images/projects6.jpg" alt="desktop screen">
+            <div class="logo">
+              <img src="/images/bloodhub.png" alt="" >
+            </div>
+          </div>
+          <div class="content">
+            <h3>BloodHub</h3>
+            <p>Group project</p>
+            <p>Connects donors with nearby centers, simplifying the blood donation process. It offers crucial information on eligibility, the donation process, and emphasizes the importance of donating blood. </p>
+            <div class="project-btns">
+              <a href="https://github.com/Blood-Hub/BloodHub"  class="btn" target="_blank">Source Code</a>
+              <a href="https://main--gleeful-custard-711273.netlify.app" class="btn" target="_blank">Live Demo</a>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="project">
+          <div class="image">
+            <img src="/images/projects6.jpg" alt="desktop screen">
+            <div class="logo">
+              <img src="/images/ovaherero-logo.png" alt="" >
+            </div>
+          </div>
+          <div class="content">
+            <h3>Ovaherero People</h3>
+            <p>Individual project</p>
+            <p>A platform to learn about Ovaherero culture and traditions. My personal curiosity, sparked by discussions with my grandmother, revealed rich historical content, I've decided to use technology to pass this information from generation to generation.</p>
+            <div class="project-btns">
+              <a href="https://github.com/hereroCoder/Ouherero"  class="btn" target="_blank">Source Code</a>
+              <a href="https://hererocoder.github.io/Ouherero/"  class="btn" target="_blank">Live Demo</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
     </section>
 
+    <!-- footer starts -->
     <footer>
       <div class="socials">
         <a href="https://www.linkedin.com/in/wame-chibamo/" target="_blank"><img src="/images/linkedin.png" alt="linkedin icon"></a>
@@ -27,6 +151,7 @@
       </div>
       <p>All right reserved &copy; 2024 Wame Chibamo</p>
     </footer>
+    <!-- footer ends -->
     
   </body>
 </html>
