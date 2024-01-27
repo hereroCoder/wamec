@@ -55,7 +55,7 @@ section {
 }
 
 p {
-  font-size: 1.5rem;
+  font-size: 1.7rem;
   line-height: 2.5rem;
 }
 
@@ -64,7 +64,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1.5rem;
+  padding: 1.5rem 10%;
   position: sticky;
   top: 0;
   left: 0;
@@ -99,7 +99,7 @@ header nav ul {
   align-items: center;
   justify-content: space-around;
   gap: 3rem;
-  font-size: 1.5rem;
+  font-size: 1.7rem;
 }
 header nav ul a {
   color: black;
@@ -121,10 +121,14 @@ header #menu-btn:hover {
 
 .hero {
   width: 100%;
+  min-height: 100vh;
   display: flex;
   justify-content: space-around;
   align-items: center;
-  flex-basis: 50%;
+  flex-wrap: wrap;
+}
+.hero .hero-left {
+  text-align: center;
 }
 .hero .hero-left h1 {
   font-size: 6rem;
@@ -132,13 +136,20 @@ header #menu-btn:hover {
 .hero .hero-left h2 {
   font-size: 3.5rem;
 }
-.hero .hero-left p {
-  font-size: 1.5rem;
+.hero .hero-right {
+  width: 50%;
 }
 .hero .hero-right img {
-  width: 50rem;
+  width: 100%;
+  min-height: 50rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 10px;
 }
 
+.projects {
+  border-top: 0.1rem solid black;
+}
 .projects .projects-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
@@ -193,13 +204,13 @@ header #menu-btn:hover {
   margin-bottom: 1rem;
 }
 .certificates .certificates-container .certificate img {
-  width: 30%;
-  height: 30%;
+  width: 20%;
+  height: 20%;
   min-width: 200px;
   cursor: pointer;
 }
 .certificates .certificates-container .certificate img:hover {
-  scale: 1.5;
+  scale: 1.2;
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
 }
 .certificates .certificates-container .certificate .content {
@@ -212,6 +223,32 @@ header #menu-btn:hover {
 }
 .certificates .load-btn {
   text-align: center;
+}
+
+.about {
+  background-color: white;
+  width: 100%;
+}
+.about .about-container .image {
+  width: 30rem;
+  margin: auto;
+}
+.about .about-container .image img {
+  width: 100%;
+  height: 30rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+  text-align: center;
+  border-radius: 50%;
+}
+.about .about-container .content {
+  width: 80%;
+  text-align: justify;
+  margin: auto;
+}
+.about .about-container .content p {
+  font-size: 1.7rem;
+  padding: 1rem 0;
 }
 
 footer {

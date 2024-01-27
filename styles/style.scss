@@ -79,7 +79,7 @@ border-radius: 5rem;
 
 
 p{
-	font-size: 1.5rem;
+	font-size: 1.7rem;
 	line-height: 2.5rem;	
 	
 
@@ -90,7 +90,7 @@ header{
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	padding:1.5rem;
+	padding:1.5rem 10%;
 	position: sticky;
 	top:0;
 	left:0;
@@ -127,7 +127,7 @@ header{
 			align-items: center;
 			justify-content:space-around;
 			gap:3rem;
-			font-size: 1.5rem;
+			font-size: 1.7rem;
 
 			a{
 				color:$black;
@@ -155,26 +155,32 @@ header{
 //header ends
 .hero{
 	width:100%;
+	min-height: 100vh;
 	display: flex;
 	justify-content: space-around;
 	align-items: center;
-	flex-basis: 50%;
+	flex-wrap: wrap;
 
 	.hero-left{
+		
+		text-align: center;
 		h1{
 			font-size: 6rem;
 		}
 		h2{
 			font-size: 3.5rem;
 		}
-		p{
-			font-size: 1.5rem;
-		}
+		
 	}
 
 	.hero-right{
+		width:50%;
+		
 		img{
-			width:50rem;
+			width:100%;
+			min-height:50rem;
+			object-fit: cover;
+			border-radius: 10px;
 		}
 	}
 }
@@ -182,6 +188,7 @@ header{
 
 // projects start
 .projects{
+	border-top: $border;
 	.projects-container{
 		@include grid(40rem);
 		text-align: center;
@@ -266,14 +273,14 @@ header{
 			margin-bottom: 1rem;
 			img{
 				
-				width:30%;
-				height:30%;
+				width:20%;
+				height:20%;
 				min-width: 200px;
 				cursor: pointer;
 
 
 				&:hover{
-					scale:1.5;
+					scale:1.2;
 					box-shadow:$box-shadow;
 				}
 			}
@@ -293,6 +300,41 @@ header{
 	}
 }
 //certificates end
+
+//about starts
+.about{
+	background-color: $white;
+	width:100%;
+	.about-container{
+
+		.image{
+			width:30rem;
+			margin: auto;
+			img{
+				width:100%;
+				height: 30rem;
+				object-fit: cover;
+				text-align: center;
+				border-radius: 50%;
+				
+			}
+		}
+		.content{
+			width:80%;
+			text-align: justify;
+			margin: auto;
+
+			p{
+				font-size: 1.7rem;
+				// box-shadow: $box-shadow;
+				padding: 1rem 0;
+			}
+		}
+	}
+}
+//about ends
+
+//contact starts
 
 footer{
 	background-color: $gray;
