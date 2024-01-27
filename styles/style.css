@@ -11,7 +11,7 @@
 }
 
 html {
-  font-size: 0.7rem;
+  font-size: 60%;
   overflow-x: hidden;
   background-color: #DDD0C8;
 }
@@ -31,10 +31,12 @@ section {
 
 .section-title {
   text-align: center;
-  margin-bottom: 3rem;
+  padding: 5rem;
+  font-weight: 400;
   font-size: 3.5rem;
   text-transform: capitalize;
   color: black;
+  letter-spacing: 0.2rem;
 }
 
 .btn {
@@ -50,6 +52,11 @@ section {
 }
 .btn:hover {
   opacity: 0.8;
+}
+
+p {
+  font-size: 1.5rem;
+  line-height: 2.5rem;
 }
 
 header {
@@ -120,10 +127,10 @@ header #menu-btn:hover {
   flex-basis: 50%;
 }
 .hero .hero-left h1 {
-  font-size: 5rem;
+  font-size: 6rem;
 }
 .hero .hero-left h2 {
-  font-size: 2.5rem;
+  font-size: 3.5rem;
 }
 .hero .hero-left p {
   font-size: 1.5rem;
@@ -134,7 +141,7 @@ header #menu-btn:hover {
 
 .projects .projects-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
   gap: 2rem;
   text-align: center;
 }
@@ -174,6 +181,39 @@ header #menu-btn:hover {
   margin-right: 2rem;
 }
 
+.certificates .certificates-container .hide {
+  display: none;
+}
+.certificates .certificates-container .certificate {
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 3rem;
+  margin-bottom: 1rem;
+}
+.certificates .certificates-container .certificate img {
+  width: 30%;
+  height: 30%;
+  min-width: 200px;
+  cursor: pointer;
+}
+.certificates .certificates-container .certificate img:hover {
+  scale: 1.5;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+}
+.certificates .certificates-container .certificate .content {
+  width: 40rem;
+}
+.certificates .certificates-container .certificate .content h4 {
+  font-size: 1.5rem;
+  font-weight: 500;
+  border-bottom: 0.1rem solid black;
+}
+.certificates .load-btn {
+  text-align: center;
+}
+
 footer {
   background-color: #323232;
   padding: 2rem;
@@ -193,6 +233,7 @@ footer .socials img:hover {
 }
 footer p {
   color: white;
+  font-size: 1rem;
   text-align: center;
 }
 
