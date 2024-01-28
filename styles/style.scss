@@ -83,7 +83,7 @@ p{
 	font-size: 1.7rem;
 	line-height: 2.5rem;
 	padding-top: 1rem;
-	word-break: break-all;		
+			
 
 }
 // header starts
@@ -386,6 +386,9 @@ header{
 				&:hover{
 					rotate:10deg;
 				}
+			}
+			p{
+			word-break: break-all;
 			}
 		}
 	}
