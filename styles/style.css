@@ -322,6 +322,12 @@ footer p {
     padding: 3rem 2rem;
   }
 }
+@media screen and (min-width: 768px) {
+  nav {
+    right: 0 !important;
+    display: flex !important;
+  }
+}
 @media (max-width: 768px) {
   header #menu-btn {
     display: inline-block;

@@ -448,6 +448,15 @@ footer{
   
 }
 
+//navitems resizing from mobile view to desktop
+@media screen and (min-width:768px) {
+	nav {
+		 right:0 !important;
+		 display: flex !important;
+	 }
+}
+
+
 @media (max-width:768px) {
 
 	header{
