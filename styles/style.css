@@ -42,13 +42,13 @@ section {
 .btn {
   display: inline-block;
   margin-top: 1rem;
+  margin-right: 1rem;
   background-color: #323232;
   padding: 1rem 2rem;
   font-size: 1.5rem;
   color: white;
   text-transform: uppercase;
   cursor: pointer;
-  border-radius: 5rem;
 }
 .btn:hover {
   opacity: 0.8;
@@ -62,6 +62,7 @@ p {
 header {
   background-color: transparent;
   display: flex;
+  min-height: 70px;
   justify-content: space-between;
   align-items: center;
   padding: 1.5rem 10%;
@@ -123,7 +124,8 @@ header #menu-btn:hover {
   width: 100%;
   min-height: 100vh;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
+  gap: 2rem;
   align-items: center;
   flex-wrap: wrap;
 }
@@ -136,11 +138,12 @@ header #menu-btn:hover {
 .hero .hero-left h2 {
   font-size: 3.5rem;
 }
-.hero .hero-right {
-  width: 50%;
+.hero .hero-left #greeting {
+  padding-bottom: 1rem;
+  animation: 0.8s infinite alternate slidein;
 }
 .hero .hero-right img {
-  width: 100%;
+  width: 50rem;
   min-height: 50rem;
   -o-object-fit: cover;
      object-fit: cover;
@@ -152,49 +155,53 @@ header #menu-btn:hover {
 }
 .projects .projects-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(50rem, 1fr));
   gap: 2rem;
   text-align: center;
 }
-.projects .projects-container .project:nth-child(1) .image .logo img, .projects .projects-container .project:nth-child(2) .image .logo img {
-  width: 10%;
-}
-.projects .projects-container .project:nth-child(3) .image .logo img, .projects .projects-container .project:nth-child(4) .image .logo img {
-  width: 20%;
+.projects .projects-container .project {
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
 }
 .projects .projects-container .project .image {
   position: relative;
 }
 .projects .projects-container .project .image img {
-  width: 80%;
+  width: 100%;
 }
 .projects .projects-container .project .image img:hover {
-  scale: 1.1;
+  scale: 1.03;
 }
 .projects .projects-container .project .image .logo {
   position: absolute;
-  top: 50%;
   left: 0%;
+  top: 50%;
+}
+.projects .projects-container .project .image .logo img {
+  width: 20%;
 }
 .projects .projects-container .project .content {
   padding: 2rem;
 }
 .projects .projects-container .project .content h3 {
   font-size: 2rem;
-  font-weight: 300;
+  font-weight: 500;
   border-bottom: 0.1rem solid black;
 }
 .projects .projects-container .project .content p {
   text-align: start;
+  margin: 1rem 0;
+}
+.projects .projects-container .project .content p span {
+  font-weight: bold;
+}
+.projects .projects-container .project .content .contibutors {
+  font-weight: 500;
+  font-size: 1.8rem;
 }
 .projects .projects-container .project .content .project-btns .btn {
-  font-size: 1rem;
-  margin-right: 2rem;
+  font-size: 1.2rem;
 }
 
-.certificates .certificates-container .hide {
-  display: none;
-}
 .certificates .certificates-container .certificate {
   justify-content: center;
   display: flex;
@@ -202,6 +209,9 @@ header #menu-btn:hover {
   align-items: center;
   gap: 3rem;
   margin-bottom: 1rem;
+}
+.certificates .certificates-container .certificate.hide {
+  display: none;
 }
 .certificates .certificates-container .certificate img {
   width: 20%;
@@ -250,6 +260,12 @@ header #menu-btn:hover {
   font-size: 1.7rem;
   padding: 1rem 0;
 }
+.about .about-container .content p.hide {
+  display: none;
+}
+.about .load-btn2 {
+  text-align: center;
+}
 
 .contact .contact-container {
   width: 80%;
@@ -258,13 +274,12 @@ header #menu-btn:hover {
 }
 .contact .contact-container .box {
   background-color: white;
-  width: 40%;
+  width: 30rem;
   margin: auto;
   border-radius: 10px;
   padding: 2rem 4rem;
   margin-bottom: 2rem;
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
-  cursor: pointer;
 }
 .contact .contact-container .box img {
   width: 5rem;
@@ -306,6 +321,9 @@ footer p {
   header {
     padding: 2rem;
   }
+  .hero .hero-right img {
+    width: 60rem;
+  }
   section {
     padding: 3rem 2rem;
   }
@@ -330,6 +348,9 @@ footer p {
   header nav ul {
     flex-direction: column;
   }
+  .projects .projects-container .project .image .logo {
+    top: 43%;
+  }
 }
 @media (max-width: 480px) {
   html {
@@ -337,5 +358,15 @@ footer p {
   }
   .section-title {
     font-size: 3rem;
+  }
+}
+@keyframes slidein {
+  from {
+    translate: -5px;
+    rotate: -10deg;
+  }
+  to {
+    rotate: 10deg;
+    translate: 5px;
   }
 }/*# sourceMappingURL=style.css.map */

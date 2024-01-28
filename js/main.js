@@ -1,3 +1,17 @@
+//header scroll background
+
+const header = document.getElementById('header');
+
+document.addEventListener('scroll', () => {
+	var scroll_position = window.scrollY;
+	if (scroll_position > 100) {
+		header.style.backgroundColor = 'white';
+        
+	} else {
+		header.style.backgroundColor = 'transparent';
+	}
+});
+
 //menu functions
 function openMenu(){
   document.querySelector('nav').style.right = '0';
@@ -8,24 +22,37 @@ function openMenu(){
   document.querySelector('nav').style.right = '-200%';
  };
 
+
+ //hero greetings
+
+const changingKeywords = document.querySelectorAll('span.changing-keyword');
+const keywordsToggle = setKeywordsToggle(changingKeywords);
+
+function setKeywordsToggle (keywords) {
+    let index = 0;
+  return setInterval(() => {
+    keywords[index].classList.remove('shown');
+    if (++index >= keywords.length) 
+        index = 0;
+    keywords[index].classList.add('shown');
+  }, 2000);
+}
+
  //certificates show more
 
  loadBtn = document.querySelector('.load-btn .btn');
-
 if(loadBtn){
   loadBtn.onclick = ()=>{
-  document.querySelectorAll('.certificates .certificates-container .hide').forEach(
+  document.querySelectorAll('.certificates-container .hide').forEach(
     show=>{
-      if(show.style.display=='block'){
-           show.style.display='none';
-            loadBtn.innerHTML='show more';
+      if(show.style.display=='flex'){
+          show.style.display='none';
+          loadBtn.innerHTML='show more';
           
       }
       else{
-        show.style.display='block';
-         loadBtn.innerHTML='show less';
-       
-
+        show.style.display='flex';
+        loadBtn.innerHTML='show less';
       }
    
     }
@@ -34,3 +61,27 @@ if(loadBtn){
 };
 
 }
+
+ //about show more
+loadBtn2 = document.querySelector('.load-btn2 .btn');
+if(loadBtn2){
+  loadBtn2.onclick = ()=>{
+  document.querySelectorAll('.about-container .hide').forEach(
+    show=>{
+      if(show.style.display=='block'){
+          show.style.display='none';
+          loadBtn2.innerHTML='show more';
+          
+      }
+      else{
+        show.style.display='block';
+        loadBtn2.innerHTML='show less';
+      }
+   
+    }
+  )
+  
+};
+
+}
+

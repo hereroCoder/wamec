@@ -64,13 +64,14 @@ section{
 .btn {
 display: inline-block;
 margin-top:1rem;
+margin-right:1rem;
 background-color: $gray;
 padding: 1rem 2rem;
 font-size: 1.5rem;
 color: $white;
 text-transform: uppercase;
 cursor: pointer;
-border-radius: 5rem;
+// border-radius: 5rem;
 
 	&:hover {
 		opacity:0.8;
@@ -88,6 +89,7 @@ p{
 header{
 	background-color: transparent;
 	display: flex;
+	min-height:70px;
 	justify-content: space-between;
 	align-items: center;
 	padding:1.5rem 10%;
@@ -157,12 +159,12 @@ header{
 	width:100%;
 	min-height: 100vh;
 	display: flex;
-	justify-content: space-around;
+	justify-content: center;
+	gap:2rem;
 	align-items: center;
 	flex-wrap: wrap;
 
 	.hero-left{
-		
 		text-align: center;
 		h1{
 			font-size: 6rem;
@@ -170,14 +172,20 @@ header{
 		h2{
 			font-size: 3.5rem;
 		}
+
+		#greeting{
+			padding-bottom: 1rem;
+			animation: 0.8s infinite alternate slidein;
+		}
+		  
+		  
+		
 		
 	}
 
 	.hero-right{
-		width:50%;
-		
 		img{
-			width:100%;
+			width:50rem;
 			min-height:50rem;
 			object-fit: cover;
 			border-radius: 10px;
@@ -190,44 +198,51 @@ header{
 .projects{
 	border-top: $border;
 	.projects-container{
-		@include grid(40rem);
+		@include grid(50rem);
 		text-align: center;
 		.project{
 
-			&:nth-child(1),&:nth-child(2){
-				.image{
-					.logo{
-						img{
-							width:10%;
-						}
-					}
-				}
-			}
+			// &:nth-child(1),&:nth-child(2){
+			// 	.image{
+			// 		.logo{
+			// 			img{
+			// 				width:10%;
+			// 			}
+			// 		}
+			// 	}
+			// }
 
-			&:nth-child(3),&:nth-child(4){
-				.image{
-					.logo{
-						img{
-							width:20%;
-						}
-					}
-				}
-			}
+			// &:nth-child(3),&:nth-child(4){
+			// 	.image{
+			// 		.logo{
+			// 			img{
+			// 				width:20%;
+			// 			}
+			// 		}
+			// 	}
+			// }
+
+			box-shadow: $box-shadow;
 			.image{
 				position: relative;
 				img{
-					width:80%;
+					width:100%;
 
 					&:hover{
-						scale:1.1;
+						scale:1.03;
 					}
 					
 				}
 
 				.logo{
 					position:absolute;
+					left:0%;
 					top:50%;
-					left:0%;	
+
+					img{
+						width:20%
+					}
+						
 					
 				}
 
@@ -238,17 +253,26 @@ header{
 
 				h3{
 					font-size:2rem;
-					font-weight: 300;
+					font-weight: 500;
 					border-bottom: $border;
 				}
 				p{
 					text-align: start;
+					margin:1rem 0;
+
+					span{
+						font-weight: bold;
+					}
 				}
+				.contibutors{
+					font-weight:500;
+					font-size:1.8rem;
+				}
+			
 
 				.project-btns{
 					.btn{
-						font-size: 1rem;
-						margin-right:2rem;
+						font-size: 1.2rem;
 					}
 				}
 			}
@@ -260,10 +284,9 @@ header{
 
 //certificates start
 .certificates{
+	// border-top: $border;
 	.certificates-container{
-		.hide{
-			display:none;
-		}
+		
 		.certificate{
 			justify-content:center;
 			display: flex;
@@ -271,6 +294,10 @@ header{
 			align-items: center;
 			gap: 3rem;
 			margin-bottom: 1rem;
+
+			&.hide{
+				display:none;
+			}
 			img{
 				
 				width:20%;
@@ -295,7 +322,6 @@ header{
 		}
 	}
 	.load-btn{
-
 		text-align: center;
 	}
 }
@@ -328,8 +354,15 @@ header{
 				font-size: 1.7rem;
 				// box-shadow: $box-shadow;
 				padding: 1rem 0;
+
+				&.hide{
+					display:none;
+				}
 			}
 		}
+	}
+	.load-btn2{
+		text-align: center;
 	}
 }
 //about ends
@@ -344,13 +377,12 @@ header{
 
 		.box{
 			background-color: $white;
-			width:40%;
+			width:30rem;
 			margin:auto;
 			border-radius: 10px;
 			padding: 2rem 4rem;
 			margin-bottom: 2rem;
 			box-shadow: $box-shadow;
-			cursor: pointer;
 
 
 			img{
@@ -393,8 +425,8 @@ footer{
 }
 // footer ends
 
-// media queries
 
+// media queries
 @media (max-width:1024px){
 	html{
 	  font-size: 55%;
@@ -405,6 +437,15 @@ footer{
 	header {
 	  padding: 2rem;
    
+	}
+	.hero{
+		.hero-right{
+			img{
+				width: 60rem;
+			}
+		}
+			
+			
 	}
 	section {
 		padding: 3rem 2rem;
@@ -435,12 +476,22 @@ footer{
 
 			ul{
 				flex-direction: column;
-
 			}
-
-			
 	  
 		}
+	}
+
+	.projects{
+		.projects-container{
+			.project{
+				.image{
+					.logo{
+						top:43%;
+					}
+				}
+			}
+		}
+		
 	}
 }
 
@@ -452,3 +503,16 @@ footer{
 	  font-size: 3rem;
 	}
 }
+
+
+@keyframes slidein {
+	from {
+	  translate: -5px;
+	  rotate: -10deg;
+	}
+  
+	to {
+	rotate: 10deg;
+	translate: 5px;
+	}
+  }

@@ -14,15 +14,19 @@
     <!-- javascript link -->
     <script src="./js/main.js" defer></script>
 
+    <!-- devicons link -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+          
+
   </head>
 
 
   <body>
     <!-- header starts -->
-    <header>
+    <header class=".header" id="header">
       <!-- logo -->
       <a href="#">
-        <p class="logo">.WAME.</p>
+        <p class="logo" id="logo">.WAME.</p>
       </a>
 
       <!-- navigation -->
@@ -46,7 +50,8 @@
     <!-- hero starts -->
     <section class="hero" id="hero">
       <div class="hero-left">
-        <P>Hello, My name is</P>
+        <p id="greeting"><i class="fa-solid fa-hand"></i>Hi! Dumelang!</p>
+        <p>My name is</p>
         <h1>Wame Chibamo</h1>
         <h2>Software Developer</h2>
         <a href="#projects" target="_blank" class="btn">My work</a>
@@ -66,18 +71,24 @@
 
         <div class="project">
           <div class="image">
-            <img src="/images/projects3.jpg" alt="desktop screen">
+            <img src="/images/projects6.jpg" alt="desktop screen">
             <div class="logo">
               <img src="/images/chibz-logo.png" alt="" >
             </div>
           </div>
           <div class="content">
-            <h3>E-commerce</h3>
-            <p>Individual project</p>
+            <h3>E-commerce (CHIBZ)</h3>
+            <p class="contibutors">Individual project</p>
             <p>As a Motswana in the UK, I struggled to find Botswana goodies online. That's why I created this shop.a quick and easy solution for Batswana abroad. Enjoy a taste of home </p>
+            <p> <span>Tools Used:</span> React <img src="/images/react.png" width="20rem" alt="">, Vite <img src="/images/vite.png" width="20rem" alt="">, TailwindCss 
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg" width="20rem" />
+            </p>
+             
+          
+          
             <div class="project-btns">
-              <a href="https://github.com/hereroCoder/onlineShop"  class="btn" target="_blank">Source Code</a>
-              <a href="https://hererocoder.github.io/onlineShop/" class="btn" target="_blank">Live Demo</a>
+              <a href="https://github.com/hereroCoder/onlineShop"  class="btn" target="_blank">Source Code <i class="fa-brands fa-github"></i></a>
+              <a href="https://hererocoder.github.io/onlineShop/" class="btn" target="_blank">Live Demo <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
             </div>
           </div>
         </div>
@@ -85,19 +96,28 @@
 
         <div class="project">
           <div class="image">
-            <img src="/images/projects3.jpg" alt="desktop screen">
+            <img src="/images/projects6.jpg" alt="desktop screen">
             <div class="logo">
               <img src="/images/logo2.png" alt="" >
             </div>
           </div>
 
           <div class="content">
-            <h3>Money App</h3>
-            <p>Individual project</p>
+            <h3>Money App (Adima)</h3>
+            <p class="contibutors">Individual project</p>
             <p>A web app for friends to effortlessly borrow or lend money among themselves. Eliminates awkward reminders about owed money and the concern of forgetting borrowers. </p>
+            <p> <span>Tools Used:</span> Html
+             
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" width="20rem"/>
+            , Sass 
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg" width="20rem" />
+            , Javascript 
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" width="20rem" />
+          
+            </p>
             <div class="project-btns">
-              <a href="https://github.com/hereroCoder/MoneyBuddies" class="btn" target="_blank">Source Code</a>
-              <a href="https://hererocoder.github.io/MoneyBuddies/" class="btn" target="_blank">Live Demo</a>
+              <a href="https://github.com/hereroCoder/MoneyBuddies" class="btn" target="_blank">Source Code  <i class="fa-brands fa-github"></i></i></a>
+              <a href="https://hererocoder.github.io/MoneyBuddies/" class="btn" target="_blank">Live Demo  <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
             </div>
           </div>
         </div>
@@ -112,11 +132,16 @@
           </div>
           <div class="content">
             <h3>BloodHub</h3>
-            <p>Group project</p>
+            <p class="contibutors">Group project</p>
             <p>Connects donors with nearby centers, simplifying the blood donation process. It offers crucial information on eligibility, the donation process, and emphasizes the importance of donating blood. </p>
+            <P> <span>Tools Used:</span> Bootsrap 
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg" width="20rem" />, React <img src="/images/react.png" width="20rem" alt="">
+              , Css
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" width="20rem" />
+            </P>
             <div class="project-btns">
-              <a href="https://github.com/Blood-Hub/BloodHub"  class="btn" target="_blank">Source Code</a>
-              <a href="https://main--gleeful-custard-711273.netlify.app" class="btn" target="_blank">Live Demo</a>
+              <a href="https://github.com/Blood-Hub/BloodHub"  class="btn" target="_blank">Source Code <i class="fa-brands fa-github"></i></a>
+              <a href="https://main--gleeful-custard-711273.netlify.app" class="btn" target="_blank">Live Demo <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
             </div>
           </div>
         </div>
@@ -131,11 +156,20 @@
           </div>
           <div class="content">
             <h3>Ovaherero People</h3>
-            <p>Individual project</p>
+            <p class="contibutors">Individual project</p>
             <p>A platform to learn about Ovaherero culture and traditions. Conversations with my grandmother revealed rich historical content, and I've decided to use technology to preserve my culture.</p>
+            <p><span>Tools Used:</span> Html
+             
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" width="20rem"/>
+            , Css
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" width="20rem" />
+            , Javascript 
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" width="20rem" />
+          
+            </p>
             <div class="project-btns">
-              <a href="https://github.com/hereroCoder/Ouherero"  class="btn" target="_blank">Source Code</a>
-              <a href="https://hererocoder.github.io/Ouherero/"  class="btn" target="_blank">Live Demo</a>
+              <a href="https://github.com/hereroCoder/Ouherero"  class="btn" target="_blank">Source Code <i class="fa-brands fa-github"></i></a>
+              <a href="https://hererocoder.github.io/Ouherero/"  class="btn" target="_blank">Live Demo <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
             </div>
           </div>
         </div>
@@ -255,18 +289,21 @@
         </div>
         <div class="content">
           <p>
-            From the quiet village of Makunda to the vibrant streets of Miami and now residing in the UK, my journey evolved from studying Biomedical Engineering to discovering a true passion for coding. Doubts about shifting careers lingered until my master's completion, where success stories of self-taught developers ignited my confidence.</p>
+            From the quiet village of Makunda to the vibrant streets of Miami and now residing in the UK, my journey evolved from studying Biomedical Engineering to discovering a true passion for coding. Doubts about shifting careers lingered until I completed master's degree, where success stories of self-taught developers ignited my confidence.</p>
             
             <P> Armed with a STEM degree and a coding foundation from coursework (including additional classes in C++ and Java during my bachelor's), I knew I had potential. However, being a jack of all trades led me to jump between languages, extending my learning journey.</P>
             
             <P> Building two web applications during Code First Girls with my teammates marked a turning point. From collaborative meetings and brainstorming sessions to design, delegation, and debugging, completing these projects felt incredibly rewarding, echoing the teamwork experienced in biomedical engineering projects.</P>
             
-            <P> Applying concepts like Moscow analysis and integrating research into projects became second nature, reviving the relevance of my BME education and highlighting its unique contribution to my skill set. </P>
+            <P class="hide"> Applying concepts like Moscow analysis and integrating research into projects became second nature, reviving the relevance of my BME education and highlighting its unique contribution to my skill set. </P>
             
-            <P>Throughout this software development journey, I served as a live-in carer for the elderly with diverse conditions from dementia to end-of-life care. The unique demands of the role have been a constant source of learning, pushing me to develop resilience, patience, compassion, and adaptability.</P>
+            <P class="hide">Throughout this software development journey, I served as a live-in carer for the elderly with diverse conditions from dementia to end-of-life care. The unique demands of the role have been a constant source of learning, pushing me to develop resilience, patience, compassion, and adaptability.</P>
             
-            <P>If you're seeking a candidate who not only comprehends the intricacies of coding but also brings a blend of resilience, empathy, and an unwavering passion for continuous learning, I am eager to explore how I can be an asset to your organization. Let's connect and discuss the possibilities.</p>
+            <P class="hide">If you're seeking a candidate who not only comprehends the intricacies of coding but also brings a blend of resilience, empathy, and an unwavering passion for continuous learning, I am eager to explore how I can be an asset to your organization. Let's connect and discuss the possibilities.</p>
         </div>
+      </div>
+      <div class="load-btn2">
+        <div class="btn">show more</div>
       </div>
     </section>
     <!-- about ends -->
@@ -290,6 +327,7 @@
        <div class="box">
         <img src="/images/house.png" alt="">
         <p>England, United Kingdom</p>
+
        </div>
 
        <a href="mailto:wamechibamo76@gmail.com" class="btn"> email me</a>
