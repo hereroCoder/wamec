@@ -253,7 +253,6 @@ header #menu-btn:hover {
 }
 .about .about-container .content {
   width: 80%;
-  text-align: justify;
   margin: auto;
 }
 .about .about-container .content p.hide {
