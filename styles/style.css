@@ -83,6 +83,11 @@ header .logo {
 }
 header nav {
   position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 3rem;
+  font-size: 1.7rem;
 }
 header nav #close-menu-btn {
   position: absolute;
@@ -96,18 +101,10 @@ header nav #close-menu-btn {
 header nav #close-menu-btn:hover {
   rotate: 45deg;
 }
-header nav ul {
-  display: flex;
-  list-style: none;
-  align-items: center;
-  justify-content: space-around;
-  gap: 3rem;
-  font-size: 1.7rem;
-}
-header nav ul a {
+header nav a {
   color: black;
 }
-header nav ul a:hover {
+header nav a:hover {
   text-decoration: underline;
   text-underline-offset: 0.8rem;
 }
@@ -333,17 +330,16 @@ footer p {
     position: fixed;
     top: 0;
     right: -200%;
+    flex-direction: column;
     background-color: white;
     width: 100vw;
     height: 100%;
     padding: 10rem;
     z-index: 1200;
+    justify-content: center;
   }
   header nav #close-menu-btn {
     display: block;
-  }
-  header nav ul {
-    flex-direction: column;
   }
   .projects .projects-container .project .image .logo {
     top: 43%;
