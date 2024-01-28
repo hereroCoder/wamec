@@ -57,6 +57,8 @@ section {
 p {
   font-size: 1.7rem;
   line-height: 2.5rem;
+  padding-top: 1rem;
+  word-break: break-all;
 }
 
 header {
@@ -140,7 +142,7 @@ header #menu-btn:hover {
 }
 .hero .hero-left #greeting {
   padding-bottom: 1rem;
-  animation: 0.8s infinite alternate slidein;
+  animation: 0.8s infinite alternate wave;
 }
 .hero .hero-right img {
   width: 50rem;
@@ -189,7 +191,6 @@ header #menu-btn:hover {
 }
 .projects .projects-container .project .content p {
   text-align: start;
-  margin: 1rem 0;
 }
 .projects .projects-container .project .content p span {
   font-weight: bold;
@@ -226,8 +227,8 @@ header #menu-btn:hover {
 .certificates .certificates-container .certificate .content {
   width: 40rem;
 }
-.certificates .certificates-container .certificate .content h4 {
-  font-size: 1.5rem;
+.certificates .certificates-container .certificate .content h3 {
+  font-size: 2rem;
   font-weight: 500;
   border-bottom: 0.1rem solid black;
 }
@@ -256,10 +257,6 @@ header #menu-btn:hover {
   text-align: justify;
   margin: auto;
 }
-.about .about-container .content p {
-  font-size: 1.7rem;
-  padding: 1rem 0;
-}
 .about .about-container .content p.hide {
   display: none;
 }
@@ -274,7 +271,7 @@ header #menu-btn:hover {
 }
 .contact .contact-container .box {
   background-color: white;
-  width: 30rem;
+  width: 35rem;
   margin: auto;
   border-radius: 10px;
   padding: 2rem 4rem;
@@ -356,11 +353,31 @@ footer p {
   html {
     font-size: 50%;
   }
+  .hero .hero-right img {
+    width: 98%;
+  }
   .section-title {
     font-size: 3rem;
   }
+  .certificates .certificate .content {
+    text-align: center;
+  }
+  .projects .projects-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 2rem;
+  }
+  .about .about-container .image {
+    width: 20rem;
+  }
+  .about .about-container .image img {
+    height: 20rem;
+  }
+  .contact .contact-container .box {
+    width: 20rem;
+  }
 }
-@keyframes slidein {
+@keyframes wave {
   from {
     translate: -5px;
     rotate: -10deg;

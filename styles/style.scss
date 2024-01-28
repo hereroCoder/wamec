@@ -81,8 +81,9 @@ cursor: pointer;
 
 p{
 	font-size: 1.7rem;
-	line-height: 2.5rem;	
-	
+	line-height: 2.5rem;
+	padding-top: 1rem;
+	word-break: break-all;		
 
 }
 // header starts
@@ -175,7 +176,7 @@ header{
 
 		#greeting{
 			padding-bottom: 1rem;
-			animation: 0.8s infinite alternate slidein;
+			animation: 0.8s infinite alternate wave;
 		}
 		  
 		  
@@ -227,7 +228,6 @@ header{
 				position: relative;
 				img{
 					width:100%;
-
 					&:hover{
 						scale:1.03;
 					}
@@ -258,7 +258,7 @@ header{
 				}
 				p{
 					text-align: start;
-					margin:1rem 0;
+					// margin:1rem 0;
 
 					span{
 						font-weight: bold;
@@ -313,10 +313,10 @@ header{
 			}
 			.content{
 				width:40rem;
-				h4{
-					font-size: 1.5rem;
-					font-weight:500;
-					border-bottom:$border;
+				h3{
+					font-size:2rem;
+					font-weight: 500;
+					border-bottom: $border;
 				}
 			}
 		}
@@ -351,10 +351,7 @@ header{
 			margin: auto;
 
 			p{
-				font-size: 1.7rem;
-				// box-shadow: $box-shadow;
-				padding: 1rem 0;
-
+				
 				&.hide{
 					display:none;
 				}
@@ -377,7 +374,7 @@ header{
 
 		.box{
 			background-color: $white;
-			width:30rem;
+			width:35rem;
 			margin:auto;
 			border-radius: 10px;
 			padding: 2rem 4rem;
@@ -499,13 +496,54 @@ footer{
 	html {
 	  font-size: 50%;
 	}
+
+	.hero{
+		.hero-right{
+			img{
+				width:98%;
+			}
+		}
+	}
 	.section-title{
 	  font-size: 3rem;
+	}
+	.certificates{
+		.certificate{
+			.content{
+				text-align: center;
+			}
+		}
+	}
+
+	.projects{
+		.projects-container{
+			@include grid(30rem);
+		}
+	}
+
+	.about{
+		.about-container{
+			.image{
+				width:20rem;
+
+				img{
+					height:20rem;
+				}
+			}
+		}
+	}
+
+	.contact{
+		.contact-container{
+			.box{
+				width:20rem;
+			}
+		}
 	}
 }
 
 
-@keyframes slidein {
+@keyframes wave {
 	from {
 	  translate: -5px;
 	  rotate: -10deg;
