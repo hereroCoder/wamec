@@ -29,7 +29,9 @@ document.querySelectorAll('.navlink').forEach(link=>{
   })
 })
 
-
+window.sr = ScrollReveal();
+sr.reveal('.projects');
+sr.reveal('.certificates');
 
  //certificates show more
 
@@ -77,4 +79,7 @@ if(loadBtn2){
 };
 
 }
+
+
+
 
