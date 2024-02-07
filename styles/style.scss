@@ -162,7 +162,7 @@ header{
 .hero{
 	border-top: none;
 	width:100%;
-	min-height: 100vh;
+	height: 100vh;
 	display: flex;
 	justify-content: center;
 	gap:2rem;
@@ -310,7 +310,7 @@ header{
 //about starts
 .about{
 	background-color: $white;
-	width:75%;
+	width:80%;
 	margin: auto;
 	.about-container{
 
@@ -333,7 +333,7 @@ header{
 
 			p{
 				border:0.1rem dotted $beige;
-				padding: 1rem;
+				padding: 2rem;
 				margin: 2rem 0;
 
 				&:hover{
