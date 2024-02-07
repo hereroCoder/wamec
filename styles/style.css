@@ -26,6 +26,7 @@ html::-webkit-scrollbar-track {
 
 section {
   padding: 5rem 10%;
+  border-top: 0.1rem solid black;
 }
 
 .section-title {
@@ -42,7 +43,7 @@ section {
   display: inline-block;
   margin-top: 1rem;
   margin-right: 1rem;
-  background-color: rgb(142, 33, 57);
+  background-color: rgb(71, 40, 91);
   padding: 1rem 2rem;
   font-size: 1.5rem;
   color: white;
@@ -50,7 +51,9 @@ section {
   cursor: pointer;
 }
 .btn:hover {
-  opacity: 0.8;
+  background-color: transparent;
+  color: rgb(71, 40, 91);
+  border: 0.2rem solid rgb(71, 40, 91);
 }
 
 p {
@@ -118,6 +121,7 @@ header #menu-btn:hover {
 }
 
 .hero {
+  border-top: none;
   width: 100%;
   min-height: 100vh;
   display: flex;
@@ -147,9 +151,6 @@ header #menu-btn:hover {
   border-radius: 10px;
 }
 
-.projects {
-  border-top: 0.1rem solid black;
-}
 .projects .projects-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(50rem, 1fr));

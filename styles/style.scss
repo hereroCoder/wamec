@@ -15,7 +15,7 @@
 $black: black;
 $gray: #323232;
 $white: white;
-$beige: rgb(142, 33, 57);
+$beige:rgb(71, 40, 91);
 $border:0.1rem solid $black;
 $box-shadow:0 0.5rem 1rem rgba(0,0,0,0.1);
 
@@ -51,6 +51,7 @@ html{
 
 section{
 	padding:5rem 10%;
+	border-top: $border;
 }
 
 .section-title{
@@ -74,7 +75,9 @@ cursor: pointer;
 // border-radius: 5rem;
 
 	&:hover {
-		opacity:0.8;
+		background-color: transparent;
+		color: $beige;
+		border: 0.2rem solid $beige;
 	}
 }
 
@@ -155,6 +158,7 @@ header{
 }
 //header ends
 .hero{
+	border-top: none;
 	width:100%;
 	min-height: 100vh;
 	display: flex;
@@ -192,7 +196,7 @@ header{
 
 // projects start
 .projects{
-	border-top: $border;
+	
 	.projects-container{
 		@include grid(50rem);
 		text-align: center;
