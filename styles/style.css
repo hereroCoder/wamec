@@ -18,7 +18,7 @@ html::-webkit-scrollbar {
   width: 0.5rem;
 }
 html::-webkit-scrollbar-thumb {
-  background-color: black;
+  background-color: #373D42;
 }
 html::-webkit-scrollbar-track {
   background-color: transparent;
@@ -26,7 +26,6 @@ html::-webkit-scrollbar-track {
 
 section {
   padding: 5rem 10%;
-  border-top: 0.1rem solid black;
 }
 
 .section-title {
@@ -35,7 +34,7 @@ section {
   font-weight: 400;
   font-size: 3.5rem;
   text-transform: capitalize;
-  color: black;
+  color: #373D42;
   letter-spacing: 0.2rem;
 }
 
@@ -57,9 +56,10 @@ section {
 }
 
 p {
-  font-size: 1.8rem;
-  line-height: 3rem;
+  font-size: 18px;
+  line-height: 1.75em;
   padding-top: 1rem;
+  color: #373D42;
 }
 
 header {
@@ -78,7 +78,7 @@ header {
 header .logo {
   font-family: "Playfair Display", serif;
   font-size: 2.5rem;
-  color: black;
+  color: #373D42;
   letter-spacing: 0.3rem;
   font-weight: 500;
 }
@@ -96,14 +96,14 @@ header nav #close-menu-btn {
   top: 1.5rem;
   right: 2rem;
   font-size: 4rem;
-  color: black;
+  color: #373D42;
   cursor: pointer;
 }
 header nav #close-menu-btn:hover {
   rotate: 45deg;
 }
 header nav a {
-  color: black;
+  color: #373D42;
 }
 header nav a:hover {
   text-decoration: underline;
@@ -112,7 +112,7 @@ header nav a:hover {
 header #menu-btn {
   cursor: pointer;
   font-size: 2.5rem;
-  color: black;
+  color: #373D42;
   margin-left: 1.5rem;
   display: none;
 }
@@ -183,7 +183,7 @@ header #menu-btn:hover {
 .projects .projects-container .project .content h3 {
   font-size: 2rem;
   font-weight: 500;
-  border-bottom: 0.1rem solid black;
+  border-bottom: 0.1rem solid #373D42;
 }
 .projects .projects-container .project .content p {
   text-align: start;
@@ -226,7 +226,7 @@ header #menu-btn:hover {
 .certificates .certificates-container .certificate .content h3 {
   font-size: 2rem;
   font-weight: 500;
-  border-bottom: 0.1rem solid black;
+  border-bottom: 0.1rem solid #373D42;
 }
 .certificates .load-btn {
   text-align: center;
@@ -234,7 +234,8 @@ header #menu-btn:hover {
 
 .about {
   background-color: white;
-  width: 100%;
+  width: 75%;
+  margin: auto;
 }
 .about .about-container .image {
   width: 30rem;
@@ -251,6 +252,14 @@ header #menu-btn:hover {
 .about .about-container .content {
   width: 80%;
   margin: auto;
+}
+.about .about-container .content p {
+  border: 0.1rem dotted rgb(71, 40, 91);
+  padding: 1rem;
+  margin: 2rem 0;
+}
+.about .about-container .content p:hover {
+  box-shadow: 2px 2px 20px rgb(71, 40, 91);
 }
 .about .about-container .content p.hide {
   display: none;
@@ -284,7 +293,7 @@ header #menu-btn:hover {
 }
 
 footer {
-  background-color: #323232;
+  background-color: rgb(71, 40, 91);
   padding: 2rem;
 }
 footer .socials {
@@ -350,6 +359,9 @@ footer p {
   }
   .projects .projects-container .project .image .logo {
     top: 43%;
+  }
+  .about {
+    width: 100%;
   }
 }
 @media (max-width: 480px) {
