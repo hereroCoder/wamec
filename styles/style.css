@@ -7,13 +7,12 @@
   outline: none;
   border: none;
   text-decoration: none;
-  transition: all 0.5s ease;
+  transition: all 0.3s;
 }
 
 html {
   font-size: 60%;
   overflow-x: hidden;
-  background-color: #DDD0C8;
 }
 html::-webkit-scrollbar {
   width: 0.5rem;
@@ -43,7 +42,7 @@ section {
   display: inline-block;
   margin-top: 1rem;
   margin-right: 1rem;
-  background-color: #323232;
+  background-color: rgb(142, 33, 57);
   padding: 1rem 2rem;
   font-size: 1.5rem;
   color: white;
@@ -55,8 +54,8 @@ section {
 }
 
 p {
-  font-size: 1.7rem;
-  line-height: 2.5rem;
+  font-size: 1.8rem;
+  line-height: 3rem;
   padding-top: 1rem;
 }
 
@@ -138,7 +137,7 @@ header #menu-btn:hover {
 }
 .hero .hero-left #greeting {
   padding-bottom: 1rem;
-  animation: 0.8s infinite alternate wave;
+  animation: wave 0.8s infinite alternate;
 }
 .hero .hero-right img {
   width: 50rem;
@@ -380,6 +379,14 @@ footer p {
     width: 20rem;
   }
 }
+.slide-in-left {
+  animation: slideInLeft 1s ease-in;
+}
+
+.slide-in-right {
+  animation: slideInRight 1s ease-in;
+}
+
 @keyframes wave {
   from {
     translate: -5px;
@@ -388,5 +395,21 @@ footer p {
   to {
     rotate: 10deg;
     translate: 5px;
+  }
+}
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-500px);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+@keyframes slideInRight {
+  from {
+    transform: translateX(500px);
+  }
+  to {
+    transform: translateX(0);
   }
 }/*# sourceMappingURL=style.css.map */

@@ -8,14 +8,14 @@
   	outline: none;
   	border:none;
  	text-decoration: none;
-	transition: all 0.5s ease;
+	transition: all 0.3s;
 	
 }
 
 $black: black;
 $gray: #323232;
 $white: white;
-$beige: #DDD0C8;
+$beige: rgb(142, 33, 57);
 $border:0.1rem solid $black;
 $box-shadow:0 0.5rem 1rem rgba(0,0,0,0.1);
 
@@ -36,7 +36,7 @@ $box-shadow:0 0.5rem 1rem rgba(0,0,0,0.1);
 html{
 	font-size: 60%;
   	overflow-x: hidden;
-	background-color: $beige;
+	// background-color: $beige;
 
 	&::-webkit-scrollbar{
 		width:0.5rem;
@@ -65,7 +65,7 @@ section{
 display: inline-block;
 margin-top:1rem;
 margin-right:1rem;
-background-color: $gray;
+background-color: $beige;
 padding: 1rem 2rem;
 font-size: 1.5rem;
 color: $white;
@@ -80,8 +80,8 @@ cursor: pointer;
 
 
 p{
-	font-size: 1.7rem;
-	line-height: 2.5rem;
+	font-size: 1.8rem;
+	line-height: 3rem;
 	padding-top: 1rem;
 			
 
@@ -171,13 +171,10 @@ header{
 		h2{
 			font-size: 3.5rem;
 		}
-		// #intro{
-		// 	font-size: 2.5rem;
-		// }
 
 		#greeting{
 			padding-bottom: 1rem;
-			animation: 0.8s infinite alternate wave;
+			animation: wave 0.8s infinite alternate;
 		}
 		  		
 	}
@@ -552,6 +549,13 @@ footer{
 }
 
 
+.slide-in-left{
+	animation: slideInLeft 1s ease-in;
+}
+.slide-in-right{
+	animation: slideInRight 1s ease-in;
+}
+
 @keyframes wave {
 	from {
 	  translate: -5px;
@@ -563,3 +567,23 @@ footer{
 	translate: 5px;
 	}
   }
+
+@keyframes slideInLeft{
+	from{
+		transform: translateX(-500px);
+	}
+	to{
+		transform: translateX(0);
+
+	}
+}
+
+@keyframes slideInRight{
+	from{
+		transform: translateX(500px);
+	}
+	to{
+		transform: translateX(0);
+
+	}
+}
