@@ -99,6 +99,27 @@ window.addEventListener("scroll", event => {
 });
 
 
+//website scroll animation
+const observer = new IntersectionObserver((entries)=>{
+  entries.forEach((entry)=>{
+    if(entry.isIntersecting){
+      entry.target.classList.add("show-items")
+    }else{
+      entry.target.classList.remove("show-items")
+    }
+  });
+});
+
+const scaleItem = document. querySelectorAll(".scale-item");
+scaleItem.forEach((el)=>observer.observe(el))
+
+const slideInTop = document. querySelectorAll(".slide-in-top");
+slideInTop.forEach((el)=>observer.observe(el))
+
+const slideInBottom = document. querySelectorAll(".slide-in-bottom");
+slideInBottom.forEach((el)=>observer.observe(el))
+
+
 
 
 
