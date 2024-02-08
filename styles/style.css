@@ -144,6 +144,7 @@ header #menu-btn:hover {
   height: 100vh;
   display: flex;
   justify-content: center;
+  padding-top: 0;
   gap: 2rem;
   align-items: center;
   flex-wrap: wrap;

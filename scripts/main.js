@@ -76,39 +76,38 @@ if(loadBtn2){
 
 }
 
+//active menu item
+const menuLink = document.querySelectorAll('nav .navlink')
+const section = document.querySelectorAll('section')
 
-const tabs = document.querySelectorAll('nav .navlink')
-
-tabs.forEach(tab => {
-  tab.addEventListener('click', () => {
-    const target = document.querySelector(tab.dataset.tabTarget)
-    tabs.forEach(tab => {
-      tab.classList.remove('active')
+menuLink.forEach(link => {
+  link.addEventListener('click', () => {
+    const target = document.querySelector(link.dataset.tabTarget)
+    menuLink.forEach(link => {
+      link.classList.remove('active')
     })
-    tab.classList.add('active')
+    link.classList.add('active')
     target.classList.add('active')
   })
 })
 
+window.addEventListener("scroll", event => {
+  let fromTop = window.scrollY;
 
-// const sections = document.querySelectorAll('section');
+  menuLink.forEach(link => {
+    let section = document.querySelector(link.hash);
 
-// window.onscroll = () => {
-//   var current = "";
+    if (
+      section.offsetTop <= fromTop + 30 &&
+      section.offsetTop + section.offsetHeight > fromTop + 30
+    ) {
+      link.classList.add("active");
+    } else {
+      link.classList.remove("active");
+    }
+  });
+});
 
-//   sections.forEach((section) => {
-//     const sectionTop = section.offsetTop;
-//     if (scrollY >= sectionTop ) {
-//       current = section.getAttribute("id"); }
-//   });
-
-//   tabs.forEach((a) => {
-//     a.classList.remove("active");
-//     if (a.classList.contains(current)) {
-//       a.classList.add("active");
-//     }
-//   });
-// };
 
 
 
