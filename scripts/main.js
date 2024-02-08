@@ -76,30 +76,20 @@ if(loadBtn2){
 
 }
 
-//active menu item
 const menuLink = document.querySelectorAll('nav .navlink')
 const section = document.querySelectorAll('section')
 
-menuLink.forEach(link => {
-  link.addEventListener('click', () => {
-    const target = document.querySelector(link.dataset.tabTarget)
-    menuLink.forEach(link => {
-      link.classList.remove('active')
-    })
-    link.classList.add('active')
-    target.classList.add('active')
-  })
-})
+//active menu item on scroll
 
 window.addEventListener("scroll", event => {
-  let fromTop = window.scrollY;
+  let fromTop = window.scrollY - 10;
 
   menuLink.forEach(link => {
     let section = document.querySelector(link.hash);
 
     if (
-      section.offsetTop <= fromTop + 30 &&
-      section.offsetTop + section.offsetHeight > fromTop + 30
+      section.offsetTop <= fromTop + 80 && //80 is from 5rem section padding
+      section.offsetTop + section.offsetHeight > fromTop + 80
     ) {
       link.classList.add("active");
     } else {
