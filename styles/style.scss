@@ -36,7 +36,8 @@ $box-shadow:0 0.5rem 1rem rgba(0,0,0,0.1);
 html{
 	font-size: 60%;
   	overflow-x: hidden;
-	// background-color: $beige;
+	scroll-behavior: smooth;
+	
 
 	&::-webkit-scrollbar{
 		width:0.5rem;
@@ -135,11 +136,33 @@ header{
 		
 		a{
 			color:$black;
+			position: relative;
 
-			&:hover{
-				text-decoration: underline;
-				text-underline-offset: 0.8rem;
+			
+			&::before {
+				content: "";
+				position: absolute;
+				display: block;
+				width: 100%;
+				height: 2px;
+				bottom: -0.6rem;
+				left: 0;
+				background-color:$black;
+				transform: scaleX(0);
+				transition: transform 0.3s ease;
 			}
+
+
+			&:hover::before{
+				transform: scaleX(1);
+			}
+
+			&.active{
+				text-decoration: underline;
+				text-underline-offset: 1rem;
+				text-decoration-thickness: 2px;
+			}
+
 		}
 		
 	}
@@ -190,7 +213,8 @@ header{
 			width:50rem;
 			min-height:50rem;
 			object-fit: cover;
-			border-radius: 10px;
+			border-radius:5px;
+			box-shadow: $box-shadow;
 		}
 	}
 }
@@ -553,6 +577,14 @@ footer{
 	animation: slideInRight 1s ease-in;
 }
 
+.slide-in-top{
+	animation: slideInTop 1s ease-in;
+}
+
+.slide-in-bottom{
+	animation: slideInBottom 1s ease-in;
+}
+
 @keyframes wave {
 	from {
 	  translate: -5px;
@@ -585,4 +617,25 @@ footer{
 		transform: translateX(0);
 
 	}
+}
+
+@keyframes slideInTop{
+	from{
+		transform: translateY(-500px);
+	}
+	to{
+		transform: translateY(0);
+
+	}
+	
+}
+@keyframes slideInBottom{
+	from{
+		transform: translateY(500px);
+	}
+	to{
+		transform: translateY(0);
+
+	}
+	
 }
