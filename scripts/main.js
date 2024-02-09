@@ -76,48 +76,45 @@ if(loadBtn2){
 
 }
 
+//active menu item on scroll
+
 const menuLink = document.querySelectorAll('nav .navlink')
 const section = document.querySelectorAll('section')
 
-//active menu item on scroll
+function activeMenuLink(){
+  let len = section.length;
+  while(--len && window.scrollY +80 < section[len].offsetTop){}//80 is from 5rem section padding
+  menuLink.forEach(sec=>sec.classList.remove("active"));
+  menuLink[len].classList.add("active");
+}
+activeMenuLink()
+window.addEventListener('scroll',activeMenuLink)
 
-window.addEventListener("scroll", event => {
-  let fromTop = window.scrollY - 10;
-
-  menuLink.forEach(link => {
-    let section = document.querySelector(link.hash);
-
-    if (
-      section.offsetTop <= fromTop + 80 && //80 is from 5rem section padding
-      section.offsetTop + section.offsetHeight > fromTop + 80
-    ) {
-      link.classList.add("active");
-    } else {
-      link.classList.remove("active");
-    }
-  });
-});
 
 
 //website scroll animation
 const observer = new IntersectionObserver((entries)=>{
   entries.forEach((entry)=>{
+    const id = entry.target.getAttribute("id");
     if(entry.isIntersecting){
-      entry.target.classList.add("show-items")
+      entry.target.classList.add("show-items");
     }else{
       entry.target.classList.remove("show-items")
     }
   });
 });
 
-const scaleItem = document. querySelectorAll(".scale-item");
+const scaleItem = document.querySelectorAll(".scale-item");
 scaleItem.forEach((el)=>observer.observe(el))
 
-const slideInTop = document. querySelectorAll(".slide-in-top");
+const slideInTop = document.querySelectorAll(".slide-in-top");
 slideInTop.forEach((el)=>observer.observe(el))
 
-const slideInBottom = document. querySelectorAll(".slide-in-bottom");
+const slideInBottom = document.querySelectorAll(".slide-in-bottom");
 slideInBottom.forEach((el)=>observer.observe(el))
+
+
+
 
 
 

@@ -19,7 +19,7 @@ html::-webkit-scrollbar {
   width: 0.5rem;
 }
 html::-webkit-scrollbar-thumb {
-  background-color: #373D42;
+  background-color: rgb(71, 40, 91);
 }
 html::-webkit-scrollbar-track {
   background-color: transparent;
@@ -33,6 +33,7 @@ section {
   text-align: center;
   padding: 5rem;
   font-weight: 400;
+  color: #373D42;
   font-size: 3.5rem;
   text-transform: capitalize;
   color: #373D42;
@@ -171,9 +172,11 @@ header #menu-btn:hover {
 }
 .hero .hero-left h1 {
   font-size: 6rem;
+  color: #373D42;
 }
 .hero .hero-left h2 {
   font-size: 3.5rem;
+  color: #373D42;
 }
 .hero .hero-left #greeting {
   padding-bottom: 1rem;
