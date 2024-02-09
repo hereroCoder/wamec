@@ -233,12 +233,14 @@ header{
 	}
 
 	.hero-right{
+		box-shadow: none;
+		animation: bounce 3s infinite;
 		img{
 			width:50rem;
 			min-height:50rem;
 			object-fit: cover;
-			border-radius:5px;
-			box-shadow: $box-shadow;
+			border-radius: 50%;
+		
 		}
 	}
 }
@@ -370,6 +372,7 @@ header{
 				object-fit: cover;
 				text-align: center;
 				border-radius: 50%;
+				border: 0.5rem solid $maincolor;
 				
 			}
 		}
@@ -596,7 +599,7 @@ footer{
 .scale-item{
 	opacity: 0;
 	transform:scale(0.9) ;
-	transition: all 2s;
+	transition: all 1s;
 }
 .slide-in-bottom{
 	opacity:0;
@@ -628,6 +631,20 @@ footer{
 	rotate: 10deg;
 	translate: 5px;
 	}
+}
+
+@keyframes bounce {
+	0% {
+	  transform: translateY(0)
+	}
+	50% {
+		transform: translateY(40px)
+	  }
+
+	100% {
+		transform: translateY(0)
+	  }
+  
 }
 
 
