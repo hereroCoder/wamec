@@ -47,8 +47,8 @@ section{
 .section-title{
 	text-align: center;
 	padding:5rem;
-  	font-size: 3rem;
-	text-transform: capitalize;
+  	font-size: 3.5rem;
+	text-transform:capitalize;
 	color:$black;
 }
 
@@ -64,7 +64,7 @@ text-transform: uppercase;
 position:relative;
 cursor: pointer;
 z-index:1;
-// border-radius: 5rem;
+
 
 	&:hover{
 		color:$maincolor;
@@ -80,7 +80,7 @@ z-index:1;
 		z-index:-1;
 		width:100%;
 		height:0;
-		transition: 0.4s;
+		transition: .5s;
 
 	}
 
@@ -199,28 +199,32 @@ header{
 	min-height: 100vh;
 	height:100%;
 	display: grid;
-	grid-template-columns: repeat(2,1fr);
+	@include grid(30rem);
 	padding-top: 0;
 	gap:4rem;
 	align-items: center;
-	text-align: center;
+	
 
 
 	.hero-left{
 		max-width: 600px;
+		text-align: center;
 		
 		
 		h1{
 			font-size: 4rem;
-			font-weight: 700;
+			font-weight: 900;
 			color:$black;
+			padding-bottom: 1rem;
+			text-transform: capitalize;
 		}
 		
 		h3{
-			font-size: 3rem;
-			font-weight: 600;
+			font-size: 3.5rem;
+			font-weight: 700;
 			color:$maincolor;
-
+			padding-bottom: 1rem;
+			text-transform: capitalize;
 			
 		}
 
@@ -240,8 +244,13 @@ header{
 		box-shadow: none;
 		animation: bounce 3s infinite;
 
+		.image{
+			width:80%;
+			margin: auto;
+		}
+
 		img{
-			width:50rem;
+			width:100%;
 			min-height:50rem;
 			object-fit: cover;
 			border-radius: 50%;
@@ -428,9 +437,11 @@ header{
 
 			img{
 				width:5rem;
+				transition: 0.5s;
+				cursor: pointer;
 
 				&:hover{
-					rotate:10deg;
+					scale:1.2;
 				}
 			}
 			p{
@@ -454,9 +465,10 @@ footer{
 
 		img{
 			width:4rem;
+			transition: 0.5s;
 
 			&:hover{
-				rotate:10deg;
+				scale:1.2;
 			}
 		}
 	}
