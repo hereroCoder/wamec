@@ -12,6 +12,18 @@ document.addEventListener('scroll', () => {
 	}
 });
 
+//hero titles
+new TypeIt("#developer", {
+  strings:[ "A Frontend Developer!","And Engineering Graduate!"],
+  speed: 150,
+  loop: true,
+}).go();
+
+
+
+
+
+
 //menu functions
 function openMenu(){
   document.querySelector('nav').style.right = '0';
