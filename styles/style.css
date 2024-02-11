@@ -331,7 +331,7 @@ header #menu-btn:hover {
 }
 .contact .contact-container .box {
   background-color: white;
-  width: 35rem;
+  width: 60%;
   margin: auto;
   border-radius: 10px;
   padding: 2rem 4rem;
@@ -453,7 +453,7 @@ footer p {
     height: 20rem;
   }
   .contact .contact-container .box {
-    width: 20rem;
+    width: 100%;
   }
 }
 .scale-item {
