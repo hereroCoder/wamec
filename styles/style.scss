@@ -198,7 +198,7 @@ header{
 	min-height: 100vh;
 	height:100%;
 	display: grid;
-	@include grid(30rem);
+	@include grid(50rem);
 	padding-top: 0;
 	gap:4rem;
 	align-items: center;
@@ -208,6 +208,8 @@ header{
 	.hero-left{
 		max-width: 600px;
 		text-align: center;
+		margin: auto;
+		
 		
 		
 		h1{
@@ -584,6 +586,9 @@ footer{
 				text-align: center;
 			}
 		}
+	}
+	.hero{
+		@include grid(30rem);
 	}
 
 	.projects{

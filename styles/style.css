@@ -156,7 +156,7 @@ header #menu-btn:hover {
   height: 100%;
   display: grid;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(50rem, 1fr));
   gap: 2rem;
   padding-top: 0;
   gap: 4rem;
@@ -165,6 +165,7 @@ header #menu-btn:hover {
 .hero .hero-left {
   max-width: 600px;
   text-align: center;
+  margin: auto;
 }
 .hero .hero-left h1 {
   font-size: 4rem;
@@ -434,6 +435,11 @@ footer p {
   }
   .certificates .certificate .content {
     text-align: center;
+  }
+  .hero {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 2rem;
   }
   .projects .projects-container {
     display: grid;
