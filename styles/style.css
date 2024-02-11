@@ -219,9 +219,10 @@ header #menu-btn:hover {
 }
 .projects .projects-container .project .image img {
   width: 100%;
+  transition: 0.5s;
 }
 .projects .projects-container .project .image img:hover {
-  scale: 1.03;
+  scale: 0.99;
 }
 .projects .projects-container .project .image .logo {
   position: absolute;
@@ -269,6 +270,7 @@ header #menu-btn:hover {
   height: 20%;
   min-width: 200px;
   cursor: pointer;
+  transition: 0.5s;
 }
 .certificates .certificates-container .certificate img:hover {
   scale: 1.2;

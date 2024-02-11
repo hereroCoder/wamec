@@ -272,8 +272,9 @@ header{
 				position: relative;
 				img{
 					width:100%;
+					transition: 0.5s;
 					&:hover{
-						scale:1.03;
+						scale:0.99;
 					}
 					
 				}
@@ -348,6 +349,7 @@ header{
 				height:20%;
 				min-width: 200px;
 				cursor: pointer;
+				transition: 0.5s;
 
 
 				&:hover{
