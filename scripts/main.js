@@ -14,7 +14,7 @@ document.addEventListener('scroll', () => {
 
 //hero titles
 new TypeIt("#developer", {
-  strings:[ "A Biomedical Engineer!","A Data Analyst!","A Software Developer!"],
+  strings:[ "A Software Developer!","A Biomedical Engineer!","A Data Analyst!"],
   speed: 150,
   loop: true,
 }).go();
